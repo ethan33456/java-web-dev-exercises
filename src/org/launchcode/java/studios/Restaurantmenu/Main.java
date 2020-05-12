@@ -3,14 +3,16 @@ package org.launchcode.java.studios.Restaurantmenu;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
+        MenuItem veggie = new MenuItem(28.00, "best veggie ever", "entree");
+
         MenuItem burger = new MenuItem(28.00, "best burger ever", "entree");
-        System.out.println(burger.getDateAdded());
         Menu mainMenu = new Menu();
-        System.out.println(mainMenu.getLastUpdated());
-        mainMenu.setAppetizer(burger);
+        mainMenu.setMenuItems(burger);
+        mainMenu.addMenuItem(veggie);
+        System.out.println(mainMenu.toString());
 //        System.out.println(mainMenu.getAppetizer());
-        for (MenuItem item: mainMenu.appetizer) {
-            System.out.println(item.getDescription());
+        for (MenuItem item: mainMenu.menuItems) {
+         //   System.out.println(item.getDescription());
         }
     }
 }

@@ -33,4 +33,16 @@ public class MenuItem {
     public Date getDateAdded() {
         return dateAdded;
     }
+    public void isNew (){
+        Date todaysDate = new Date();
+        if (true) {
+            System.out.println(todaysDate.getTime());
+            System.out.println(dateAdded.toInstant());
+
+        }
+
+    }
+    public String toString () {
+        return " Price: " + price + " Description: " + description;
+    }
 }
